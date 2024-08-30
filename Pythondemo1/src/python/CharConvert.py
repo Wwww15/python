@@ -16,5 +16,15 @@ print(decodeByte.decode('utf-8', 'ignore'))
 placeHolder = 'hello,%s' % '张三' + ',今年我%d岁了' % 18 + ',你呢?'
 print(placeHolder)
 
-print('%2d-%02d' % (3.14, 1000.033))
-print('%.2f' % 3.1415926)
+print('%4d-%02d' % (4111111, 1))
+print('%.2f' % 3)
+
+helloWords = '我叫张三 {0}'.format(',今年19岁')
+print(helloWords)
+
+percent = '女生占全班的 %d %%' % 20
+print(percent)
+
+grown = (85-72)/72*100
+print('小明今年的成绩提升了 {0:.1f}%'.format(grown))
+print('小明今年的成绩提升了 %.1f%%' % grown)

@@ -34,3 +34,11 @@ print(L[0][0])
 print(L[1][1])
 # 打印Bob:
 print(L[2][2])
+
+
+list = []
+list1 = [1,2,3]
+list.append(list1)
+print(list)
+
+

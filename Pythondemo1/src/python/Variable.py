@@ -17,5 +17,10 @@ print(f)
 print(s1)
 print(s2)
 print(s3)
-print(2**16)
-    
+print(2 ** 16)
+
+a = 1
+b = 2
+a, b = b, a
+print(a)
+print(b)

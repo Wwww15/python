@@ -1,8 +1,11 @@
-from collections.abc import Iterable
+from collections.abc import Iterable, Iterator
 
 print(isinstance(123, Iterable))
 print(isinstance((1,), Iterable))
 print(isinstance({1: 1}, Iterable))
+print(isinstance(range(10), Iterable))
+print(isinstance((x for x in range(10)), Iterator))
+print(isinstance(iter([x for x in range(10)]), Iterator))
 
 likes = ['篮球', '排球', '网球']
 extra = {'height': 190, 'weight': 180}
@@ -18,9 +21,9 @@ def findMinAndMax(L):
     min = None
     max = None
     for item in L:
-        if min is None or item < min :
+        if min is None or item < min:
             min = item
-        if max is None or item > max :
+        if max is None or item > max:
             max = item
     return (min, max)
 

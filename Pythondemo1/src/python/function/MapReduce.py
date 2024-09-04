@@ -31,13 +31,13 @@ def str2float(s):
         return DIGITS[s]
 
     def float(a, b):
-        return a + b * 0.1
+        return a * 0.1 + b
 
     def int(a, b):
         return a * 10 + b
 
     index = s.index('.')
-    return reduce(int, map(char2num, s[:index])) + reduce(float, map(char2num, s[index + 1:]))
+    return reduce(int, map(char2num, s[:index])) + reduce(float, map(char2num, reversed(s[index + 1:])))/10
 
 
 print('str2float(\'123.456\') =', str2float('123.456'))

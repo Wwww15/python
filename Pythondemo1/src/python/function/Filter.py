@@ -7,9 +7,9 @@ def main():
 
 
 def _odd_iter():
-    n = 1
+    n = 2
     while True:
-        n = n + 2
+        n = n + 1
         yield n
 
 

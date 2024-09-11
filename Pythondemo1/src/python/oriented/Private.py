@@ -27,3 +27,9 @@ if __name__ == '__main__':
             print('测试失败!')
         else:
             print('测试成功!')
+
+    # 测试私有属性的赋值
+    print(bart.get_name())
+    bart.__name = '张三'
+    print(bart._Student__name)
+    print(bart.__name)

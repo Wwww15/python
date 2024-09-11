@@ -4,7 +4,6 @@ print(name.title())
 print(name.upper())
 print(name.lower())
 
-
 # 字符串+变量
 first_name = "张"
 last_name = "三"
@@ -12,7 +11,7 @@ full_name = f"{first_name} {last_name}"
 print(full_name)
 message = f"Hello,{full_name.title()} f形式!"
 print(message)
-message = "{} {} format形式！ ".format(first_name,last_name);
+message = "{} {} format形式！ ".format(first_name, last_name);
 print(message)
 
 # 字符串中的制表符、换行符、空白
@@ -53,12 +52,5 @@ print(newMessage)
 famous_person = " Albert Einstein "
 newMessage = f'{famous_person.lstrip()} once said, “A person who never made a mistake nevertried anything new.”'
 print(newMessage)
-
-
-
-
-
-
-
 
 

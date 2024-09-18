@@ -53,4 +53,8 @@ famous_person = " Albert Einstein "
 newMessage = f'{famous_person.lstrip()} once said, “A person who never made a mistake nevertried anything new.”'
 print(newMessage)
 
+txt = "apple/banana/cherry/apple/banana/cherry"
 
+x = txt.rsplit("/", 2)
+
+print(x)

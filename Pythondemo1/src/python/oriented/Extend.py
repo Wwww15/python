@@ -3,6 +3,7 @@ class Person(object):
     def sayHello(self):
         print("hello Person")
 
+
 class Child(Person):
 
     def sayHello(self):
@@ -21,8 +22,7 @@ class Ox(object):
         print("hello,I am ox")
 
 
-
-def Communicate(person):
+def communicate(person):
     print("Hello,I amd alien,Who are you?")
     person.sayHello()
 
@@ -30,13 +30,10 @@ def Communicate(person):
 if __name__ == "__main__":
     oldMan = OldMan()
     child = Child()
-    Communicate(oldMan)
-    print(isinstance(oldMan,Person))
-    print(isinstance('1',Person))
+    communicate(oldMan)
+    print(isinstance(oldMan, Person))
+    print(isinstance('1', Person))
 
     ox = Ox()
-    Communicate(ox)
-    print(isinstance(ox,Person))
-
-
-
+    communicate(ox)
+    print(isinstance(ox, Person))

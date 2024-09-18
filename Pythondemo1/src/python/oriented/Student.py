@@ -1,7 +1,8 @@
 class Student(object):
-    def __init__(self, name, age):
+    def __init__(self, name, age, *, height=18):
         self.name = name
         self.age = age
+        self.__height = height
 
     def print_info(self):
         s = "name:%s,age:%d" % (self.name, self.age)
@@ -16,5 +17,3 @@ if __name__ == '__main__':
 
     studentA.location = '成都高新区'
     print(studentA.location)
-
-    

@@ -1,3 +1,4 @@
+import doctest
 def fact(n):
     '''
     Calculate 1*2*...*n
@@ -19,6 +20,6 @@ def fact(n):
 
 
 if __name__ == '__main__':
-    import doctest
+
 
     doctest.testmod()

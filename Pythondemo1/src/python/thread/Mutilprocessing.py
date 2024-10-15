@@ -15,22 +15,27 @@ def mutilt_process():
     print(" %s 搞事儿完了" % name)
 
 
-def pool_process(index):
+def do_pool_process(index):
     print("子线程pid: %s，第 %s 孩子，开始执行啦" % (os.getpid(), index))
     sleep_time = 1 + random.random() * 3
     start = time.time()
     time.sleep(sleep_time)
     end = time.time()
-    print("子线程pid: %s，第 %s 孩子，执行完啦，执行时间：%d" % (os.getpid(), index,end-start))
+    print("子线程pid: %s，第 %s 孩子，执行完啦，执行时间：%d" % (os.getpid(), index, end - start))
 
-
-if __name__ == '__main__':
+def pool_process():
     pool = Pool()
     print("父线程pid: %s" % os.getpid())
     print("当前cpu核心数: %s" % os.cpu_count())
-    for index in range(13):
-        pool.apply_async(pool_process, args=(index,))
+    for index in range(20):
+            pool.apply_async(do_pool_process, args=(index,))
 
     pool.close()
     pool.join()
     print("所有的子线程都执行完啦！")
+
+
+if __name__ == '__main__':
+    # mutilt_process()
+    pool_process()
+

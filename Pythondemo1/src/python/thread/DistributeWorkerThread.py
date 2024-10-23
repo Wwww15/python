@@ -16,7 +16,7 @@ receive_queue = manager.get_receive_queue()
 
 while True:
     try:
-        msg = send_queue.get(timeout=1000)
+        msg = send_queue.get(timeout=10)
         print("worker receice num: %d" % msg)
         receive_queue.put(msg * msg)
     except queue.Empty:

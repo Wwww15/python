@@ -18,32 +18,38 @@ def send_msg(send_queue: queue.Queue):
 def get_msg(receive_queue: queue.Queue):
     n = 1
     while True:
-        # if n > 3:
-        #     break
-        result = receive_queue.get(timeout=1000)
-        # if not result:
-        #     time.sleep(n * 2)
-        #     n += 1
+        if n > 3:
+            break
+        try:
+            result = receive_queue.get(timeout=10)
+            if not result:
+                time.sleep(n * 2)
+                n += 1
+                continue
+        except queue.Empty:
+            print("master has no receive msg")
+            break
         print("master receive num: %d" % result)
 
 
+send_queue = queue.Queue()
+receive_queue = queue.Queue()
+
 # 发送队列
-def send_queue():
-    send_queue = queue.Queue()
+def return_send_queue():
     return send_queue
 
     # 接受队列
 
 
-def receive_queue():
-    receive_queue = queue.Queue()
+def return_receive_queue():
     return receive_queue
 
 
 def master_thread():
     # 注册队列
-    QueueManager.register("get_send_queue", callable=send_queue)
-    QueueManager.register("get_receive_queue", callable=receive_queue)
+    QueueManager.register("get_send_queue", callable=return_send_queue)
+    QueueManager.register("get_receive_queue", callable=return_receive_queue)
     # 绑定端口
     manager = QueueManager(address=("127.0.0.1", 5000), authkey=b"abc")
     # 启动queue

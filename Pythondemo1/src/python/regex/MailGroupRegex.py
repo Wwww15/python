@@ -2,13 +2,14 @@ import re
 
 
 def name_of_email(addr):
-    regex = r'(<([\w\s]+)>)?[\w\s]+@[\w\s]+(\.com|\.org)'
+    regex = r'(<([\w\s]+)>)?([\w\s]+)@[\w\s]+(\.com|\.org)'
     re_compile = re.compile(regex)
     match = re_compile.match(addr)
     if match:
         group_first = match.group(1)
-        print(group_first)
-        return str(group_first)
+        if group_first:
+            return match.group(2)
+        return match.group(3)
     else:
         return None
 

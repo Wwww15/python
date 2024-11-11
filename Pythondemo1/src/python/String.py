@@ -59,3 +59,5 @@ x = txt.rsplit("/", 3)
 
 print(x)
 print(x[1])
+
+print('=' * 4)

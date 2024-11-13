@@ -34,3 +34,4 @@ if __name__ == '__main__':
     # 过滤
     filter = [x for x in os.listdir(".") if os.path.isfile(x) and os.path.splitext(x)[1] == '.txt']
     print(filter)
+

@@ -1,4 +1,4 @@
-from io import StringIO
+from iooper import StringIO
 
 
 if __name__ == '__main__':

@@ -27,6 +27,7 @@ def create_query(name):
     print("create_query exit")
 
 
+@contextmanager
 def decorate_method(param):
     print("param %s start" % param)
     yield
@@ -36,5 +37,8 @@ def decorate_method(param):
 if __name__ == "__main__":
     # with User("Jack") as u:
     #     u.query()
-    with create_query("zhangsan") as u:
-        u.query()
+    # with create_query("zhangsan") as u:
+    #     u.query()
+    with decorate_method("加油啊"):
+        print("每天进步一点点")
+        print("每天努力一点点")

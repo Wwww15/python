@@ -4,7 +4,9 @@ from xml.parsers.expat import ParserCreate
 
 class XmlBpmnHandler(object):
 
-    def startElementHandler(self, name, attrs,data):
+
+
+    def startElementHandler(self, name, attrs):
         print("startElement: %s ,attr: %s" % (name, attrs))
 
     def endElementHandler(self, name):

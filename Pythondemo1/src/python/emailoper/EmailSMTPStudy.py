@@ -118,9 +118,9 @@ def send_html_and_txt_email(from_user, pwd, to_user, txt_msg, html_msg):
 
 if __name__ == "__main__":
     from_user = "1006380802@qq.com"
-    pwd = "bylogoytpvikbcgg"
+    pwd = "irwmidkbtrmibfgj"
     to_user = "1006380802@qq.com"
-    # send_txt_email(from_user,pwd,to_user,"你好，我是python初学者！")
+    send_txt_email(from_user,pwd,to_user,"你好，我是python初学者！")
 
     # html_content = '<html><body><h1>Hello</h1><p>send by <a href="http://www.python.org">Python</a>...</p></body></html>'
     # send_html_email(from_user, pwd, to_user, html_content)
@@ -132,7 +132,7 @@ if __name__ == "__main__":
     # file_path = "courage_boy.jpg"
     # send_img_email(from_user, pwd, to_user, img_html, file_path)
 
-    txt_content = "你好，我是python初学者！"
-    html_content = '<html><body><h1>Hello</h1><p>Welcome to <a href="http://www.python.org">Python</a>...</p></body></html>'
-    send_html_and_txt_email(from_user,pwd,to_user,txt_content,html_content)
+    # txt_content = "你好，我是python初学者！"
+    # html_content = '<html><body><h1>Hello</h1><p>Welcome to <a href="http://www.python.org">Python</a>...</p></body></html>'
+    # send_html_and_txt_email(from_user,pwd,to_user,txt_content,html_content)
 

@@ -19,4 +19,6 @@ print(exponentiation)
 exponentiation1 = 10 ** 99
 print(exponentiation1)
 
+print((-1)**(-2))
+
 

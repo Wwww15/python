@@ -55,6 +55,9 @@ print(newMessage)
 
 txt = "apple/banana/cherry/apple/banana/cherry"
 
-x = txt.rsplit("/", 1)
+x = txt.rsplit("/", 3)
 
+print(x)
 print(x[1])
+
+print('=' * 4)
